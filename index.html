@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vio • Be My Valentine? 💖</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <!-- Bootstrap CSS (Optional for grid, but we have custom styles) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Background Blobs for Glass Effect -->
+    <div class="background-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <!-- Floating Hearts Container -->
+    <div id="hearts-container"></div>
+
+    <!-- Main Content -->
+    <div id="main-section">
+      <div class="glass-card">
+        <!-- Recipient Image (Floating Heart) -->
+        <div class="recipient-img-container">
+          <img src="images/user.png" alt="My Valentine" class="recipient-img" />
+        </div>
+
+        <div class="icon-decoration">
+          <span class="sparkle">✨</span>
+          <span class="rose">🌹</span>
+          <span class="sparkle">✨</span>
+        </div>
+
+        <h1 class="main-heading">Hey Vio, 💖</h1>
+        <h1 class="main-heading">Will you be my Valentine?</h1>
+
+        <div class="buttons-container">
+          <button id="yes-btn" class="btn-custom btn-yes">
+            <span class="btn-icon">✅</span>
+            YES
+          </button>
+          <button id="no-btn" class="btn-custom btn-no">
+            <span class="btn-icon">❌</span>
+            NO
+          </button>
+        </div>
+
+        <p class="hint-text">
+          Choose wisely... 💕<br />NO wants you to say yes, but it’s a little
+          shy🤭🫣
+        </p>
+      </div>
+    </div>
+
+    <!-- Success Section (Hidden Initially) -->
+    <div id="success-section">
+      <div class="success-wrapper">
+        <!-- Recipient Image (Floating Heart) -->
+        <div class="success-recipient-img-container">
+          <img src="images/user.png" alt="My Valentine" class="recipient-img" />
+        </div>
+
+        <div class="success-icon-animation">
+          <span class="big-heart" style="font-size: 4rem">❤️</span>
+        </div>
+
+        <h1 class="success-heading">YAY!! I was hoping you'd say yes 🥹💘</h1>
+
+        <p class="success-subtext">
+          You just made my whole week. Take time and listen to this song I
+          dedicated to you ❤️
+        </p>
+
+        <!-- Gift Section -->
+        <div class="gift-section">
+          <div class="gift-box" style="margin-top: 2rem">
+            <div class="gift-icon">🎁</div>
+            <h3 class="gift-title">Your Gift 💝</h3>
+            <p class="gift-description">A special song just for you...</p>
+          </div>
+        </div>
+
+        <!-- YouTube Video Section -->
+        <div class="video-section">
+          <div class="video-wrapper">
+            <iframe
+              id="youtube-video"
+              src=""
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Music -->
+    <!-- <audio id="bg-music" loop>
+    <source src="https://pub-f068c51852e54047addb236f4908d0ec.r2.dev/audio.m3u8" type="audio/mpeg">
+  </audio> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
