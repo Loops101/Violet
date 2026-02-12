@@ -22,7 +22,11 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
   </head>
 
   <body>
@@ -39,13 +43,47 @@
     <!-- Floating Hearts Container -->
     <div id="hearts-container"></div>
 
+    <!-- Intro Section -->
+    <div id="intro-section">
+      <div id="plane-container">
+        <dotlottie-wc
+          id="plane-lottie"
+          src="https://lottie.host/c79ec6a7-c448-4394-a66b-95629d86b21f/VVm0d2IObd.lottie"
+          style="width: 400px; height: 400px"
+          autoplay
+          loop
+        ></dotlottie-wc>
+      </div>
+      <div id="envelope-container" class="hidden">
+        <!-- <div id="envelope">💌</div> -->
+        <dotlottie-wc
+          id="envelope-lottie"
+          src="https://lottie.host/a4b050dd-1f3c-46db-b4d7-5f18ef3bb658/JA9jOvjAiG.lottie"
+          style="width: 400%; max-width: 400px; height: auto"
+          autoplay
+          loop
+        ></dotlottie-wc>
+        <p class="click-hint">Click to Open</p>
+      </div>
+    </div>
+
+    <!-- Puzzle Section -->
+    <div id="puzzle-section" class="hidden">
+      <h2 class="puzzle-title">Piece Together My Heart 🧩</h2>
+      <div id="puzzle-container"></div>
+      <p class="puzzle-hint" id="puzzle-hint">
+        Drag and drop tiles to solve the puzzle!
+      </p>
+    </div>
+
     <!-- Main Content -->
-    <div id="main-section">
+    <div id="main-section" class="hidden">
       <div class="glass-card">
         <!-- Recipient Image (Floating Heart) -->
-        <div class="recipient-img-container">
-          <img src="images/user.png" alt="My Valentine" class="recipient-img" />
-        </div>
+        <!-- Recipient Image (Floating Heart) REMOVED as per request -->
+        <!-- <div class="recipient-img-container">
+          <img src="images/Her.jpg" alt="My Valentine" class="recipient-img" />
+        </div> -->
 
         <div class="icon-decoration">
           <span class="sparkle">✨</span>
@@ -53,8 +91,7 @@
           <span class="sparkle">✨</span>
         </div>
 
-        <h1 class="main-heading">Hey Vio, 💖</h1>
-        <h1 class="main-heading">Will you be my Valentine?</h1>
+        <h1 class="main-heading">Will you be my Valentine? 💖</h1>
 
         <div class="buttons-container">
           <button id="yes-btn" class="btn-custom btn-yes">
@@ -78,20 +115,41 @@
     <div id="success-section">
       <div class="success-wrapper">
         <!-- Recipient Image (Floating Heart) -->
-        <div class="success-recipient-img-container">
-          <img src="images/user.png" alt="My Valentine" class="recipient-img" />
-        </div>
+        <!-- Recipient Image (Floating Heart) REMOVED as per request -->
+        <!-- <div class="success-recipient-img-container">
+          <img src="images/Her.jpg" alt="My Valentine" class="recipient-img" />
+        </div> -->
 
         <div class="success-icon-animation">
           <span class="big-heart" style="font-size: 4rem">❤️</span>
         </div>
 
-        <h1 class="success-heading">YAY!! I was hoping you'd say yes 🥹💘</h1>
+        <h1 class="success-heading">YAY!! I knew you'd say yes 🥹💘</h1>
 
         <p class="success-subtext">
           You just made my whole week. Take time and listen to this song I
           dedicated to you ❤️
         </p>
+
+        <!-- Curry Video Section (Before Gift) -->
+        <div
+          class="curry-video-section"
+          style="margin: 2rem auto; max-width: 600px"
+        >
+          <video
+            id="curry-video"
+            loop
+            style="
+              border-radius: 15px;
+              display: block;
+              width: 100%;
+              height: auto;
+            "
+          >
+            <source src="" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         <!-- Gift Section -->
         <div class="gift-section">
@@ -102,8 +160,25 @@
           </div>
         </div>
 
+        <div
+          class="action-buttons-container mt-4"
+          style="
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <button id="download-btn" class="btn btn-primary rounded-pill px-4">
+            📥 Download Image
+          </button>
+          <button id="whatsapp-btn" class="btn btn-success rounded-pill px-4">
+            💬 Send "YES" on WhatsApp
+          </button>
+        </div>
+
         <!-- YouTube Video Section -->
-        <div class="video-section">
+        <!-- <div class="youtube-video-section" style="margin-top: 2rem">
           <div class="video-wrapper">
             <iframe
               id="youtube-video"
@@ -119,22 +194,26 @@
                 picture-in-picture;
               "
               allowfullscreen
+              style="display: none"
             >
             </iframe>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <!-- Background Music -->
-    <!-- <audio id="bg-music" loop>
-    <source src="https://pub-f068c51852e54047addb236f4908d0ec.r2.dev/audio.m3u8" type="audio/mpeg">
-  </audio> -->
+    <audio id="bg-music" loop>
+      <!-- Source will be set dynamically from details.js -->
+    </audio>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/details.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
