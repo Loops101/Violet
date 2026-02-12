@@ -237,14 +237,16 @@ window.addEventListener("resize", () => {
 
 // ==================== New Button Handlers ====================
 if (downloadBtn) {
-  downloadBtn.addEventListener("click", () => {
-    const link = document.createElement("a");
-    // Use puzzle image or a success image
-    link.href = SITE_DETAILS.puzzleImage || "images/puzzle/avatar.png";
-    link.download = "my-valentine-puzzle.jpg";
-    link.click();
-  });
+    downloadBtn.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.href = "images/puzzle/avatar.png"; 
+        link.download = "my-valentine-puzzle.jpg";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
 }
+
 
 if (whatsappBtn) {
   whatsappBtn.addEventListener("click", () => {
