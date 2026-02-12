@@ -1,6 +1,6 @@
 const SITE_DETAILS = {
   name: "Her Name",
-  whatsappNumber: "254717406525",
+  whatsappNumber: "254728237133",
   avatarImage: "images/puzzle/avatar.png", // Avatar image used for the puzzle
   actualImage: "images/puzzle/actual.jpeg", // Real image shown after puzzle completion
   puzzleImage: "images/puzzleimage.jpeg", // Legacy - will use avatarImage instead
